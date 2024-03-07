@@ -19,6 +19,6 @@ ForEach ($Server in $Servers)
     }
   Catch
     {
-      Add-Content Unavailable-Servers.txt $server
+      Add-Content Unavailable-Servers.txt $Server
     }
 }
