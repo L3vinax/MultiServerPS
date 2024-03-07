@@ -1,11 +1,11 @@
-#Import Active Directory module to allow Get-ADComputers to work.  
+#Import Active Directory module to allow Get-ADComputer to work.  
 #If running on a server, the RSAT-AD-Powershell windows feature may need to be installed, simply uncomment line 3.
 #Install-WindowsFeature RSAT-AD-Powershell
 Import-Module -Name ActiveDirectory
 
 #Get list of server names from Active Directory. This returns only the name of the Server.  
 #Further filtering could be done to focus on a specific OU
-$servers = Get-ADComputer -Filter * | select-object -expandproperty Name
+$Servers = Get-ADComputer -Filter * | select-object -expandproperty Name
 
 #Loop through the returned servers variable and run a command or script on each machine.
 #Uncomment either line 17 or 18 depending on need.
